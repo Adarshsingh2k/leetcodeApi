@@ -39,6 +39,7 @@ const query = `
 // format data 
 const formatData = (data) => {
     let sendData =  {
+        profileName:data.matchedUser.username,
         totalSolved: data.matchedUser.submitStats.acSubmissionNum[0].count,
         totalSubmissions:  data.matchedUser.submitStats.totalSubmissionNum,
         totalQuestions: data.allQuestionsCount[0].count,
